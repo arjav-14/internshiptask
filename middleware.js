@@ -1,5 +1,6 @@
-// Temporarily disable middleware to fix static assets issue
-export async function middleware(req) {
+import { NextResponse } from "next/server";
+
+export function middleware(request) {
   return NextResponse.next();
 }
 

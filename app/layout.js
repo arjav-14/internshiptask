@@ -1,19 +1,13 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+export const revalidate = 0;
 
-export const metadata = {
-  title: 'Audio Transcription Dashboard',
-  description: 'Admin dashboard for audio transcription',
-}
-
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
